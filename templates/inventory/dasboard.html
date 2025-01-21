@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<section id="dashboard" class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        {% if listing %}
+        <!-- <h2>Welcome {{ user.first_name }}</h2> -->
+        <!-- <p>Here are the property listings that you have inquired about</p> -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">User</th>
+              <th scope="col">Lot #</th>
+              <th scope="col">Make</th>
+              <th scope="col">Model</th>
+              <th scope="col">Doors</th>
+              <th scope="col">Color</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%for vehicle in listing%}
+            <tr>
+              <td>{{ vehicle.id }}</td>
+              <td>{{ vehicle.user }}</td>
+              <td>{{ vehicle.lot_number }}</td>
+              <td>{{ vehicle.make }}</td>
+              <td>{{ vehicle.model }}</td>
+              <td>{{ vehicle.doors }}</td>
+              <td>{{ vehicle.color }}</td>
+              <td>{{ vehicle.description }}</td>
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+        {% else %}
+        <p>You have not made any registration</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
