@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <!-- JUMBOTRON -->
+  <br />
+  <div class="jumbotron text-center pt-10">
+    {% if user.is_authenticated %}
+    <h1 class="display-4">Vehicle Manager</h1>
+    <br />
+    <a class="btn btn-primary btn-lg" href="{% url 'add' %}">Add a car</a>
+    {% else %}
+    <h1 class="display-4">Welcome To Cigna Challenge</h1>
+    <p class="lead">Create an account to start</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'register' %}">SignOn</a> or
+    <a class="btn btn-primary btn-lg" href="{% url 'login' %}">Login</a>
+    {% endif %}
+  </div>
+  <br />
+</div>
+{% endblock %}
