@@ -16,3 +16,7 @@ var/
 *.pyd
 *.pyo
 *.pyd
+
+# SQLite
+*.sqlite3
+*.db
