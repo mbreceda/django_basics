@@ -2,17 +2,74 @@
 <div class="container">
   <!-- JUMBOTRON -->
   <br />
-  <div class="jumbotron text-center pt-10">
+  <div
+    class="jumbotron text-center pt-10"
+    style="background-color: #f8f9fa; padding: 2rem; border-radius: 0.5rem"
+  >
     {% if user.is_authenticated %}
-    <h1 class="display-4">Vehicle Manager</h1>
+    <h1 class="display-4" style="font-weight: bold; color: #007bff">
+      Vehicle Manager
+    </h1>
     <br />
-    <a class="btn btn-primary btn-lg" href="{% url 'add' %}">Add a car</a>
+    <a
+      class="btn btn-primary btn-lg"
+      href="{% url 'add' %}"
+      style="background-color: #007bff; border-color: #007bff"
+      >Add a car</a
+    >
     {% else %}
-    <h1 class="display-4">Welcome To Cigna Challenge</h1>
-    <p class="lead">Create an account to start</p>
-    <a class="btn btn-primary btn-lg" href="{% url 'register' %}">SignOn</a> or
-    <a class="btn btn-primary btn-lg" href="{% url 'login' %}">Login</a>
+    <h1 class="display-4" style="font-weight: bold; color: #007bff">
+      Welcome To Cigna Challenge
+    </h1>
+    <p class="lead" style="color: #6c757d">
+      Create an account to start managing your vehicles efficiently.
+    </p>
+    <a
+      class="btn btn-primary btn-lg"
+      href="{% url 'register' %}"
+      style="
+        background-color: #007bff;
+        border-color: #007bff;
+        margin-right: 10px;
+      "
+      >Sign Up</a
+    >
+    <a
+      class="btn btn-secondary btn-lg"
+      href="{% url 'login' %}"
+      style="border-color: #007bff"
+      >Login</a
+    >
     {% endif %}
+  </div>
+  <br />
+  <!-- FEATURES SECTION -->
+  <div class="row text-center">
+    <div class="col-md-4">
+      <i class="fas fa-car fa-3x" style="color: #007bff"></i>
+      <h3>Manage Vehicles</h3>
+      <p>Keep track of all your vehicles in one place.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="fas fa-tools fa-3x" style="color: #007bff"></i>
+      <h3>Maintenance</h3>
+      <p>Schedule and record maintenance activities.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="fas fa-chart-line fa-3x" style="color: #007bff"></i>
+      <h3>Performance</h3>
+      <p>Monitor the performance of your vehicles.</p>
+    </div>
+  </div>
+  <br />
+  <!-- CALL TO ACTION -->
+  <div class="text-center">
+    <a
+      class="btn btn-success btn-lg"
+      href="{% url 'register' %}"
+      style="background-color: #28a745; border-color: #28a745"
+      >Get Started Now</a
+    >
   </div>
   <br />
 </div>
