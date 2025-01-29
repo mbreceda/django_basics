@@ -32,6 +32,11 @@
             </form>
           </li>
         {% else %}
+        <li class="nav-item {% if 'add' in request.path %}active{% endif %} mr-3">
+            <a class="nav-link" href="{% url 'courses:list' %}">
+              <i class="fas fa-user-plus"></i> Courses
+            </a>
+          </li>
           <li class="nav-item {% if 'register' in request.path %}active{% endif %} mr-3">
             <a class="nav-link" href="{% url 'register' %}">
               <i class="fas fa-user-plus"></i> Register

@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block content %}
+<section id="courses" class="py-5">
+  <div class="container">
+    <h2>Courses</h2>
+    <p class="lead">Here are the courses we offer.</p>
+    <div class="row">
+      {% for course in courses %}
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h4 class="card-title">{{ course.title }}</h4>
+            <p class="card-text">{{ course.description }}</p>
+            <a
+              href="{% url 'courses:detail' course.pk %}"
+              class="btn btn-primary"
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

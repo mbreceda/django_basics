@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block content %}
+<article class="card">
+  <div class="card-body">
+    <h2 class="card-title">
+      <a href="{% url 'courses:detail' step.course.pk %}">
+        {{ step.course.title }}
+      </a>
+    </h2>
+    <h2 class="card-title">{{ step.title }}</h2>
+    <p class="card-text">{{ step.description }}</p>
+    <p class="card-text">{{ step.content | linebreaks }}</p>
+  </div>
+</article>
+{% endblock %}

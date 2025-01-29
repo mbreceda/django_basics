@@ -1,0 +1,53 @@
+// basics/fixtures/courses.json
+
+[
+    {
+        "model": "basics.course",
+        "pk": 1,
+        "fields": {
+            "title": "Introduction to Python",
+            "description": "Learn the basics of Python programming.",
+            "created_at": "2023-10-01T12:34:56.789Z"
+        }
+    },
+    {
+        "model": "basics.course",
+        "pk": 2,
+        "fields": {
+            "title": "Advanced Django",
+            "description": "Deep dive into Django framework.",
+            "created_at": "2023-10-02T12:34:56.789Z"
+        }
+    }
+]
+
+// Load Data DB
+python manage.py loaddata basics/fixtures/courses.json
+
+// Dump Data into JSON
+python manage.py dumpdata basics.Course --output=basics/fixtures/courses.json
+
+[
+    {
+        "model": "basics.step",
+        "pk": 1,
+        "fields": {
+            "title": "Introduction",
+            "description": "Introduction to the course",
+            "order": 1,
+            "course": 1
+        }
+    },
+    {
+        "model": "basics.step",
+        "pk": 2,
+        "fields": {
+            "title": "Getting Started",
+            "description": "How to get started with the course",
+            "order": 2,
+            "course": 1
+        }
+    }
+]
+
+python manage.py loaddata basics/fixtures/steps.json

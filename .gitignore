@@ -21,3 +21,4 @@ var/
 *.sqlite3
 *.db
 staticfiles/
+env/

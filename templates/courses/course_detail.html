@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<article class="card">
+  <div class="card-body">
+    <h2 class="card-title">{{ course.title }}</h2>
+    <p class="card-text">{{ course.description }}</p>
+
+    <section>
+      {% for step in course.step_set.all %}
+      <div class="card mt-3">
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="{% url 'courses:step' course.pk step.pk %}"
+              >Step {{ forloop.counter }}</a
+            >: {{ step.title }}
+          </h3>
+          <p class="card-text">{{ step.content }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
+  </div>
+</article>
+{% endblock %}
