@@ -6,47 +6,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav">
-        <li class="nav-item {% if '/' == request.path %}active{% endif %} mr-3">
-          <a class="nav-link" href="{% url 'index' %}">Home</a>
-        </li>
-      </ul>
       <ul class="navbar-nav ml-auto">
-        {% if user.is_authenticated %}
-          <li class="nav-item {% if 'add' in request.path %}active{% endif %} mr-3">
-            <a class="nav-link" href="{% url 'add' %}">
-              <i class="fas fa-user-plus"></i> Add Vehicle
-            </a>
-          </li>
-          <li class="nav-item {% if 'dashboard' in request.path %}active{% endif %} mr-3">
-            <a class="nav-link" href="{% url 'dashboard' %}">
-              <i class="fas fa-tachometer-alt"></i> Dashboard
-            </a>
-          </li>
-          <li class="nav-item mr-3">
-            <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
-              <i class="fas fa-sign-out-alt"></i> Logout
-            </a>
-            <form action="{% url 'logout' %}" id="logout" method="POST" style="display: none;">
-              {% csrf_token %}
-            </form>
-          </li>
-        {% else %}
+        <!-- {% if user.is_authenticated %}
+        {% else %} -->
         <li class="nav-item {% if 'add' in request.path %}active{% endif %} mr-3">
-            <a class="nav-link" href="{% url 'courses:list' %}">
-              <i class="fas fa-user-plus"></i> Courses
-            </a>
-          </li>
-          <li class="nav-item {% if 'register' in request.path %}active{% endif %} mr-3">
-            <a class="nav-link" href="{% url 'register' %}">
-              <i class="fas fa-user-plus"></i> Register
-            </a>
-          </li>
-          <li class="nav-item {% if 'login' in request.path %}active{% endif %} mr-3">
-            <a class="nav-link" href="{% url 'login' %}">
-              <i class="fas fa-sign-in-alt"></i> Login
-            </a>
-          </li>
+          <a class="nav-link" href="{% url 'courses:list' %}">
+            <i class="fas fa-user-plus"></i> Courses
+          </a>
+        </li>
         {% endif %}
       </ul>
     </div>

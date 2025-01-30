@@ -5,43 +5,7 @@
   <div
     class="jumbotron text-center pt-10"
     style="background-color: #f8f9fa; padding: 2rem; border-radius: 0.5rem"
-  >
-    {% if user.is_authenticated %}
-    <h1 class="display-4" style="font-weight: bold; color: #007bff">
-      Vehicle Manager
-    </h1>
-    <br />
-    <a
-      class="btn btn-primary btn-lg"
-      href="{% url 'add' %}"
-      style="background-color: #007bff; border-color: #007bff"
-      >Add a car</a
-    >
-    {% else %}
-    <h1 class="display-4" style="font-weight: bold; color: #007bff">
-      Welcome To Cigna Challenge
-    </h1>
-    <p class="lead" style="color: #6c757d">
-      Create an account to start managing your vehicles efficiently.
-    </p>
-    <a
-      class="btn btn-primary btn-lg"
-      href="{% url 'register' %}"
-      style="
-        background-color: #007bff;
-        border-color: #007bff;
-        margin-right: 10px;
-      "
-      >Sign Up</a
-    >
-    <a
-      class="btn btn-secondary btn-lg"
-      href="{% url 'login' %}"
-      style="border-color: #007bff"
-      >Login</a
-    >
-    {% endif %}
-  </div>
+  ></div>
   <br />
   <!-- FEATURES SECTION -->
   <div class="row text-center">
@@ -63,14 +27,7 @@
   </div>
   <br />
   <!-- CALL TO ACTION -->
-  <div class="text-center">
-    <a
-      class="btn btn-success btn-lg"
-      href="{% url 'register' %}"
-      style="background-color: #28a745; border-color: #28a745"
-      >Get Started Now</a
-    >
-  </div>
+
   <br />
 </div>
 {% endblock %}
