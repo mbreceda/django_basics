@@ -1,4 +1,12 @@
 {% extends "base.html" %} {% block content %}
-<h1>{{ step.title }}</h1>
-<p>{{ step.description }}</p>
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h1 class="card-title">{{ step.title }}</h1>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ step.description }}</p>
+    </div>
+  </div>
+</div>
 {% endblock %}

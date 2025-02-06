@@ -1,0 +1,20 @@
+[
+    {
+        "model": "basics.question",
+        "pk": 1,
+        "fields": {
+            "quiz": 1,
+            "order": 1,
+            "prompt": "What is Python?"
+        }
+    },
+    {
+        "model": "basics.question",
+        "pk": 2,
+        "fields": {
+            "quiz": 1,
+            "order": 2,
+            "prompt": "What is Django?"
+        }
+    }
+]
