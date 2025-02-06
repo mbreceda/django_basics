@@ -1,0 +1,46 @@
+[
+    {
+        "model": "basics.text",
+        "pk": 1,
+        "fields": {
+            "title": "Introduction to Python",
+            "description": "Learn the basics of Python programming.",
+            "order": 1,
+            "course": 1,
+            "content": "Python is a versatile programming language."
+        }
+    },
+    {
+        "model": "basics.text",
+        "pk": 2,
+        "fields": {
+            "title": "Advanced Django",
+            "description": "Deep dive into Django framework.",
+            "order": 2,
+            "course": 1,
+            "content": "Django is a high-level Python web framework."
+        }
+    },
+    {
+        "model": "basics.text",
+        "pk": 3,
+        "fields": {
+            "title": "Introduction to Python",
+            "description": "Learn the basics of Python programming.",
+            "order": 1,
+            "course": 2,
+            "content": "Python is a versatile programming language."
+        }
+    },
+    {
+        "model": "basics.text",
+        "pk": 4,
+        "fields": {
+            "title": "Advanced Django",
+            "description": "Deep dive into Django framework.",
+            "order": 2,
+            "course": 2,
+            "content": "Django is a high-level Python web framework."
+        }
+    }
+]

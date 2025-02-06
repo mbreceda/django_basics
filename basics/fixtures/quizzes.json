@@ -1,0 +1,46 @@
+[
+    {
+        "model": "basics.quiz",
+        "pk": 1,
+        "fields": {
+            "title": "Python Basics Quiz",
+            "description": "Test your knowledge of Python basics.",
+            "order": 3,
+            "course": 1,
+            "total_questions": 10
+        }
+    },
+    {
+        "model": "basics.quiz",
+        "pk": 2,
+        "fields": {
+            "title": "Django Advanced Quiz",
+            "description": "Test your knowledge of advanced Django concepts.",
+            "order": 4,
+            "course": 2,
+            "total_questions": 15
+        }
+    },
+    {
+        "model": "basics.quiz",
+        "pk": 3,
+        "fields": {
+            "title": "Python Basics Quiz",
+            "description": "Test your knowledge of Python basics.",
+            "order": 3,
+            "course": 1,
+            "total_questions": 10
+        }
+    },
+    {
+        "model": "basics.quiz",
+        "pk": 4,
+        "fields": {
+            "title": "Django Advanced Quiz",
+            "description": "Test your knowledge of advanced Django concepts.",
+            "order": 4,
+            "course": 2,
+            "total_questions": 15
+        }
+    }
+]

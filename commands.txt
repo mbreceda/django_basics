@@ -29,25 +29,53 @@ python manage.py dumpdata basics.Course --output=basics/fixtures/courses.json
 
 [
     {
-        "model": "basics.step",
+        "model": "basics.text",
         "pk": 1,
         "fields": {
-            "title": "Introduction",
-            "description": "Introduction to the course",
+            "title": "Introduction to Python",
+            "description": "Learn the basics of Python programming.",
             "order": 1,
-            "course": 1
+            "course": 1,
+            "content": "Python is a versatile programming language."
         }
     },
     {
-        "model": "basics.step",
+        "model": "basics.text",
         "pk": 2,
         "fields": {
-            "title": "Getting Started",
-            "description": "How to get started with the course",
+            "title": "Advanced Django",
+            "description": "Deep dive into Django framework.",
             "order": 2,
-            "course": 1
+            "course": 1,
+            "content": "Django is a high-level Python web framework."
         }
     }
 ]
 
-python manage.py loaddata basics/fixtures/steps.json
+[
+    {
+        "model": "basics.quiz",
+        "pk": 1,
+        "fields": {
+            "title": "Python Basics Quiz",
+            "description": "Test your knowledge of Python basics.",
+            "order": 3,
+            "course": 1,
+            "total_questions": 10
+        }
+    },
+    {
+        "model": "basics.quiz",
+        "pk": 2,
+        "fields": {
+            "title": "Django Advanced Quiz",
+            "description": "Test your knowledge of advanced Django concepts.",
+            "order": 4,
+            "course": 1,
+            "total_questions": 15
+        }
+    }
+]
+
+python manage.py loaddata basics/fixtures/texts.json
+python manage.py loaddata basics/fixtures/quizzes.json
